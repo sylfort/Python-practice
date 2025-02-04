@@ -16,3 +16,14 @@ def first_n_terms_array(n):
 
 print(first_n_terms_array(3), "5, 11, 29")
 print(first_n_terms_array(5), "5, 11, 29, 83, 245")
+
+def calc_nth_term(n):
+    if n == 1:
+        base = 5
+        return base
+    else:
+        previous = calc_nth_term(n - 1)
+        return previous * 3 - 4
+
+print(calc_nth_term(3), "29")
+print(calc_nth_term(5), "245")
